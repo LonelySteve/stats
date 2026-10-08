@@ -63,6 +63,7 @@ public enum ModuleType: Int {
     case remote
     
     case combined
+    case mihomo
     
     public var stringValue: String {
         switch self {
@@ -77,6 +78,7 @@ public enum ModuleType: Int {
         case .clock: return "Clock"
         case .remote: return "Remote"
         case .combined: return ""
+        case .mihomo: return "Mihomo"
         }
     }
     

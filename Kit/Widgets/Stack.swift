@@ -33,6 +33,7 @@ public class StackWidget: WidgetWrapper {
     private var fixedSizeState: Bool = false
     private var monospacedFontState: Bool = false
     private var alignmentState: String = "left"
+    private var labelState: Bool = false
     
     private var values: [Stack_t] = []
     private let textCache = WidgetTextCache(limit: 256)
@@ -50,11 +51,12 @@ public class StackWidget: WidgetWrapper {
     }
     
     public init(title: String, config: NSDictionary?, preview: Bool = false) {
+        self.labelState = config?["Label"] as? Bool ?? false
         if let config, preview {
             if let previewConfig = config["Preview"] as? NSDictionary {
                 if let value = previewConfig["Values"] as? String {
                     for (i, value) in value.split(separator: ",").enumerated() {
-                        self.values.append(Stack_t(key: "\(i)", value: String(value)))
+                        self.values.append(Stack_t(key: "\(i)", value: String(value), label: self.labelState ? title : nil))
                     }
                 }
             }
@@ -104,6 +106,36 @@ public class StackWidget: WidgetWrapper {
         
         guard !values.isEmpty else {
             self.setWidth(0)
+            return
+        }
+
+        if self.labelState {
+            var x: CGFloat = 0
+            for (index, element) in values.enumerated() {
+                let style = NSMutableParagraphStyle()
+                style.alignment = .left
+                let label = NSAttributedString(string: element.label ?? element.key, attributes: [
+                    .font: NSFont.systemFont(ofSize: 7, weight: .light),
+                    .foregroundColor: isDarkMode ? NSColor.white : NSColor.textColor,
+                    .paragraphStyle: style
+                ])
+                let value = NSAttributedString(string: element.value, attributes: [
+                    .font: NSFont.systemFont(ofSize: 12, weight: .regular),
+                    .foregroundColor: isDarkMode ? NSColor.white : NSColor.black,
+                    .paragraphStyle: style
+                ])
+                let width = max(31, label.size().width.rounded(.up))
+                // Match Mini's text rectangles and drawing method exactly.
+                let origin = x + Constants.Widget.margin.x
+                label.draw(with: NSRect(x: origin, y: 12, width: width, height: 7))
+                value.draw(with: NSRect(x: origin, y: 1, width: width, height: 13))
+                x += width + 2 * Constants.Widget.margin.x
+                if index < values.count - 1 {
+                    // Separate NSStatusItems have 8 points of padding on each side.
+                    x += 16
+                }
+            }
+            self.setWidth(x)
             return
         }
         
@@ -237,7 +269,9 @@ public class StackWidget: WidgetWrapper {
             self.queue.sync {
                 values.forEach { (p: Stack_t) in
                     if let idx = self.values.firstIndex(where: { $0.key == p.key }) {
+                        if self.values[idx].label != p.label { tableNeedsToBeUpdated = true }
                         self.values[idx].value = p.value
+                        self.values[idx].label = p.label
                         return
                     }
                     tableNeedsToBeUpdated = true
@@ -262,6 +296,11 @@ public class StackWidget: WidgetWrapper {
     
     public override func settings() -> NSView {
         let view = SettingsContainerView()
+
+        if self.labelState {
+            view.addArrangedSubview(self.orderTableView)
+            return view
+        }
         
         var rows = [
             PreferencesRow(localizedString("Display mode"), component: selectView(

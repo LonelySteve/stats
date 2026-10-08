@@ -52,6 +52,37 @@ Stats is an application that allows you to monitor your macOS system.
  - Sensors information (Temperature/Voltage/Power)
  - Bluetooth devices
  - Multiple time zone clock
+ - Mihomo provider subscription usage and expiration
+
+### Mihomo
+
+Enable the Mihomo module in Stats settings to read `GET /providers/proxies`.
+The default API address is `http://192.168.8.1:9090`; set the API secret in the
+module settings (stored in macOS Keychain). Providers are read on enable and
+every 10 minutes, with a manual Refresh button in the popup.
+Automatic reads never display Keychain authorization dialogs. The credential
+or access error is cached for the current app session; polling reuses it.
+If access is required, click **Read secret** in Mihomo settings to authorize
+the read, or enter and save the secret. Saving updates the session credential.
+Local ad-hoc builds may require authorization again after replacing the app.
+The list excludes `vehicleType: Compatible` entries created internally for
+direct proxies and policy groups. Configured HTTP, File and Inline providers
+remain visible even when their subscription metadata is unavailable.
+
+Select the providers to show in the menu bar and edit their display names in
+the module settings. Each selected provider displays its name above its remaining
+quota percentage by default, in the same layout as CPU/RAM. Enable **Invert
+display (show used quota)** to display the used percentage instead; the choice
+is saved and updates the menu bar immediately. Exhausted quota shows 0% remaining;
+unknown quota stays unavailable. The first provider with
+subscription information is selected by default. Clear a display name to
+restore the name returned by the API. The popup lists all providers with
+upload, download, used/total quota and subscription expiration (`Expire`, a
+Unix timestamp). Providers without subscription information show that it is
+unavailable; an expiration of zero is shown as not provided. The module does
+not add usage across providers because multiple providers can share a subscription.
+
+Run the API contract tests with `python3 Kit/scripts/run-mihomo-tests.py`.
 
 ## FAQs
 

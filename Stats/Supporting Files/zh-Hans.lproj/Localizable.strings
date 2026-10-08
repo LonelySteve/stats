@@ -569,3 +569,23 @@
 "Login to System Stats to see your devices" = "登录 System Stats 以查看您的设备"; // qwen3.8:27b
 "Monitor HTTP, ICMP and custom endpoints" = "监控 HTTP、ICMP 和自定义端点"; // qwen3.8:27b
 "Monitor and control your Macs from anywhere. Sign in to your System Stats account to see all your devices and hosts in one place." = "随时随地监控和控制你的 Mac。登录你的 System Stats 账户，即可在一个地方查看所有设备和主机。"; // qwen3.8:27b
+
+// Mihomo
+"API address" = "API 地址";
+"Saved" = "已保存";
+"Select providers and edit their display names" = "选择要展示的 provider，并编辑展示名称";
+"Enable Mihomo to load providers" = "启用 Mihomo 模块以读取 provider 列表";
+"Could not save secret to Keychain" = "无法将 secret 保存到钥匙串";
+"Read secret" = "读取密钥";
+"Secret loaded" = "密钥已读取";
+"Invert display (show used quota)" = "反转显示（显示已用量）";
+"Could not read secret; click Read secret in Mihomo settings to authorize Keychain access" = "无法读取密钥，请在 Mihomo 设置中点击“读取密钥”以授权访问钥匙串";
+"No providers" = "没有 provider";
+"providers" = "个 provider";
+"proxies" = "个代理节点";
+"Expires" = "到期时间";
+"Not provided" = "未提供";
+"No subscription usage information" = "未提供订阅用量信息";
+"Invalid mihomo API address" = "Mihomo API 地址无效";
+"Invalid mihomo API response" = "Mihomo API 响应无效";
+"Mihomo authentication failed; check the secret" = "Mihomo 认证失败，请检查 secret";

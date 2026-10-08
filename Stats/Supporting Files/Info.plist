@@ -39,6 +39,8 @@
 	<string>Copyright © 2020 Serhiy Mytrovtsiy. All rights reserved.</string>
 	<key>NSLocationUsageDescription</key>
 	<string>This permission allows displaying the connected Wi-Fi network name and BSSID.</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>This permission allows reading subscription usage from your configured mihomo API on the local network.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This permission allows displaying the connected Wi-Fi network name and BSSID.</string>
 	<key>NSPrincipalClass</key>

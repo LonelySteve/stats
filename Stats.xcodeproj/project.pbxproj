@@ -221,6 +221,15 @@
 		9AF9EE0F2464875F005D2270 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF9EE0E2464875F005D2270 /* main.swift */; };
 		9AF9EE1124648ADC005D2270 /* readers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF9EE1024648ADC005D2270 /* readers.swift */; };
 		AA00000000000000000000A1 /* libIOReport.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1E45552D11D66200525864 /* libIOReport.tbd */; };
+		D06EF51C98114759B3F58787 /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B8CDE0F36E4404966A6A42 /* api.swift */; };
+		502E6BA525034C0BA89E5B41 /* settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68849CB795EA4A7B92251270 /* settings.swift */; };
+		C0BCAA7B57D5482C9F9FA36E /* Mihomo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8918117D370041869C02ADD7 /* Mihomo.framework */; };
+		FC731EA9D20E487293C40381 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D158946B9B45D8B527B995 /* main.swift */; };
+		291D6CFC2D2E476EBA3C3D1B /* Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2846F72666A9CC00EC1F6D /* Kit.framework */; };
+		41BA4ED9110441AD95CA7BF9 /* reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2808AFE0D03D4B2FAD65A7C9 /* reader.swift */; };
+		5DB5BF6704A94503AE01F79F /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = D179652709314CDDAB8C3827 /* config.plist */; };
+		1542BE1BD7D047768568141E /* popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4F4763CD149D3B966ECE6 /* popup.swift */; };
+		7D2A14DB1653408D948C286B /* Mihomo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8918117D370041869C02ADD7 /* Mihomo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -420,6 +429,20 @@
 			remoteGlobalIDString = 9AF9EE0124648751005D2270;
 			remoteInfo = Disk;
 		};
+		033C682D99504F07BD974159 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A1410ED229E721100D29793 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A2846F62666A9CC00EC1F6D;
+			remoteInfo = Kit;
+		};
+		0ABD5B09784D438394B11CF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A1410ED229E721100D29793 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4DC3071A3EE4728B404435B;
+			remoteInfo = Mihomo;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -494,6 +517,7 @@
 			files = (
 				9AF9EE0A24648751005D2270 /* Disk.framework in Embed Frameworks */,
 				5C2229A429CCB3C400F00E69 /* Clock.framework in Embed Frameworks */,
+				7D2A14DB1653408D948C286B /* Mihomo.framework in Embed Frameworks */,
 				5E0C63502FBDB7DE00D9BA3E /* Remote.framework in Embed Frameworks */,
 				9A81C75E2449A41400825D92 /* RAM.framework in Embed Frameworks */,
 				9AE29ADD249A50350071B02D /* Sensors.framework in Embed Frameworks */,
@@ -778,6 +802,13 @@
 		CE47845D298F55F900F564FD /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F8A38F83253303A8006D4D81 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FCBD9253255C7D9900E1621A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		87B8CDE0F36E4404966A6A42 /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
+		A9E4F4763CD149D3B966ECE6 /* popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popup.swift; sourceTree = "<group>"; };
+		68849CB795EA4A7B92251270 /* settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settings.swift; sourceTree = "<group>"; };
+		A4D158946B9B45D8B527B995 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2808AFE0D03D4B2FAD65A7C9 /* reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reader.swift; sourceTree = "<group>"; };
+		D179652709314CDDAB8C3827 /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
+		8918117D370041869C02ADD7 /* Mihomo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mihomo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -832,6 +863,7 @@
 			files = (
 				9AF9EE0924648751005D2270 /* Disk.framework in Frameworks */,
 				5C2229A329CCB3C400F00E69 /* Clock.framework in Frameworks */,
+				C0BCAA7B57D5482C9F9FA36E /* Mihomo.framework in Frameworks */,
 				5E0C634F2FBDB7DE00D9BA3E /* Remote.framework in Frameworks */,
 				9AE29ADC249A50350071B02D /* Sensors.framework in Frameworks */,
 				9ABFF8FD248BEBCB00C9041A /* Battery.framework in Frameworks */,
@@ -931,6 +963,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A2847D12666AA9500EC1F6D /* Kit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F199558CCBC40F8BBAF5FF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				291D6CFC2D2E476EBA3C3D1B /* Kit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1073,6 +1113,7 @@
 				9AAC5E2A280ACC120043D892 /* Tests.xctest */,
 				5CFE492729264DF1000F2856 /* eu.exelban.Stats.SMC.Helper */,
 				5C22299D29CCB3C400F00E69 /* Clock.framework */,
+				8918117D370041869C02ADD7 /* Mihomo.framework */,
 				5CE7E78A2C318512006BC92C /* WidgetsExtension.appex */,
 				5E0C63472FBDB7DE00D9BA3E /* Remote.framework */,
 			);
@@ -1322,6 +1363,7 @@
 				9ABFF8F7248BEBCB00C9041A /* Battery */,
 				9A11AAD0266FD77F000C1C05 /* Bluetooth */,
 				5C22299E29CCB3C400F00E69 /* Clock */,
+				77488D8139594F5DB0D35266 /* Mihomo */,
 				5E0C635B2FBDB82300D9BA3E /* Remote */,
 			);
 			path = Modules;
@@ -1386,6 +1428,19 @@
 				5C2229BB29CF66B100F00E69 /* header.h */,
 			);
 			path = Disk;
+			sourceTree = "<group>";
+		};
+		77488D8139594F5DB0D35266 /* Mihomo */ = {
+			isa = PBXGroup;
+			children = (
+				A4D158946B9B45D8B527B995 /* main.swift */,
+				2808AFE0D03D4B2FAD65A7C9 /* reader.swift */,
+				A9E4F4763CD149D3B966ECE6 /* popup.swift */,
+				87B8CDE0F36E4404966A6A42 /* api.swift */,
+				68849CB795EA4A7B92251270 /* settings.swift */,
+				D179652709314CDDAB8C3827 /* config.plist */,
+			);
+			path = Mihomo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1483,6 +1538,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C2229BD29CF685A00F00E69 /* header.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83ADB4441DD744539490B9D1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1618,6 +1680,7 @@
 				9A2846FD2666A9CC00EC1F6D /* PBXTargetDependency */,
 				9A11AAD5266FD77F000C1C05 /* PBXTargetDependency */,
 				5C2229A229CCB3C400F00E69 /* PBXTargetDependency */,
+				6C6229A903894ED59BA0CA38 /* PBXTargetDependency */,
 				5CE7E79B2C318513006BC92C /* PBXTargetDependency */,
 				5E0C634E2FBDB7DE00D9BA3E /* PBXTargetDependency */,
 			);
@@ -1834,6 +1897,25 @@
 			productReference = 9AF9EE0224648751005D2270 /* Disk.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		B4DC3071A3EE4728B404435B /* Mihomo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6BB4EF7BDFD442897F63B12 /* Build configuration list for PBXNativeTarget "Mihomo" */;
+			buildPhases = (
+				83ADB4441DD744539490B9D1 /* Headers */,
+				B0ACD7177DD14F2798C34CA6 /* Sources */,
+				0F199558CCBC40F8BBAF5FF8 /* Frameworks */,
+				0814E8A322044E638599B07C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				31D600A6F77D44C2BFBFF137 /* PBXTargetDependency */,
+			);
+			name = Mihomo;
+			productName = Mihomo;
+			productReference = 8918117D370041869C02ADD7 /* Mihomo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1981,6 +2063,7 @@
 				9AE29AD4249A50350071B02D /* Sensors */,
 				9A11AACE266FD77F000C1C05 /* Bluetooth */,
 				5C22299C29CCB3C400F00E69 /* Clock */,
+				B4DC3071A3EE4728B404435B /* Mihomo */,
 				5E0C63462FBDB7DE00D9BA3E /* Remote */,
 				9AAC5E29280ACC120043D892 /* Tests */,
 				5CFE492629264DF1000F2856 /* Helper */,
@@ -2109,6 +2192,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AB14B78248CEF3B00DC6731 /* config.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0814E8A322044E638599B07C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DB5BF6704A94503AE01F79F /* config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2403,6 +2494,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B0ACD7177DD14F2798C34CA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				502E6BA525034C0BA89E5B41 /* settings.swift in Sources */,
+				D06EF51C98114759B3F58787 /* api.swift in Sources */,
+				41BA4ED9110441AD95CA7BF9 /* reader.swift in Sources */,
+				1542BE1BD7D047768568141E /* popup.swift in Sources */,
+				FC731EA9D20E487293C40381 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -2545,6 +2648,16 @@
 			isa = PBXTargetDependency;
 			target = 9AF9EE0124648751005D2270 /* Disk */;
 			targetProxy = 9AF9EE0724648751005D2270 /* PBXContainerItemProxy */;
+		};
+		6C6229A903894ED59BA0CA38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4DC3071A3EE4728B404435B /* Mihomo */;
+			targetProxy = 0ABD5B09784D438394B11CF3 /* PBXContainerItemProxy */;
+		};
+		31D600A6F77D44C2BFBFF137 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A2846F62666A9CC00EC1F6D /* Kit */;
+			targetProxy = 033C682D99504F07BD974159 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -3897,6 +4010,81 @@
 			};
 			name = Release;
 		};
+		6B05EF2ED71544FE95F53C27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = RP2S87B72W;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Serhiy Mytrovtsiy. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.exelban.Stats.Mihomo;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		298351E8D08A43939E4B344E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = RP2S87B72W;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Serhiy Mytrovtsiy. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.exelban.Stats.Mihomo;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -4058,6 +4246,15 @@
 			buildConfigurations = (
 				9AF9EE0B24648751005D2270 /* Debug */,
 				9AF9EE0C24648751005D2270 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6BB4EF7BDFD442897F63B12 /* Build configuration list for PBXNativeTarget "Mihomo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B05EF2ED71544FE95F53C27 /* Debug */,
+				298351E8D08A43939E4B344E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

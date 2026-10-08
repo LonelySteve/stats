@@ -569,3 +569,23 @@
 "Login to System Stats to see your devices" = "Login to System Stats to see your devices";
 "Monitor HTTP, ICMP and custom endpoints" = "Monitor HTTP, ICMP and custom endpoints";
 "Monitor and control your Macs from anywhere. Sign in to your System Stats account to see all your devices and hosts in one place." = "Monitor and control your Macs from anywhere. Sign in to your System Stats account to see all your devices and hosts in one place.";
+
+// Mihomo
+"API address" = "API address";
+"Saved" = "Saved";
+"Select providers and edit their display names" = "Select providers and edit their display names";
+"Enable Mihomo to load providers" = "Enable Mihomo to load providers";
+"Could not save secret to Keychain" = "Could not save secret to Keychain";
+"Read secret" = "Read secret";
+"Secret loaded" = "Secret loaded";
+"Invert display (show used quota)" = "Invert display (show used quota)";
+"Could not read secret; click Read secret in Mihomo settings to authorize Keychain access" = "Could not read secret; click Read secret in Mihomo settings to authorize Keychain access";
+"No providers" = "No providers";
+"providers" = "providers";
+"proxies" = "proxies";
+"Expires" = "Expires";
+"Not provided" = "Not provided";
+"No subscription usage information" = "No subscription usage information";
+"Invalid mihomo API address" = "Invalid mihomo API address";
+"Invalid mihomo API response" = "Invalid mihomo API response";
+"Mihomo authentication failed; check the secret" = "Mihomo authentication failed; check the secret";

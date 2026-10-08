@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Name</key><string>Mihomo</string>
+    <key>State</key><false/>
+    <key>Symbol</key><string>network</string>
+    <key>Widgets</key>
+    <dict>
+        <key>sensors</key>
+        <dict>
+            <key>Default</key><true/>
+            <key>Label</key><true/>
+            <key>Preview</key>
+            <dict><key>Values</key><string>15%</string></dict>
+            <key>Order</key><integer>0</integer>
+        </dict>
+    </dict>
+    <key>Settings</key>
+    <dict><key>popup</key><true/><key>notifications</key><false/></dict>
+</dict>
+</plist>

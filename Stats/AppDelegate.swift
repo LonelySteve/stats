@@ -21,6 +21,7 @@ import GPU
 import Bluetooth
 import Clock
 import Remote
+import Mihomo
 
 let updater = Updater(github: "exelban/stats", url: "https://api.mac-stats.com/release/latest")
 var modules: [Module] = [
@@ -33,7 +34,8 @@ var modules: [Module] = [
     Battery(),
     Bluetooth(),
     Clock(),
-    Remote()
+    Remote(),
+    Mihomo()
 ]
 
 @main
