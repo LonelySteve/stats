@@ -67,7 +67,7 @@ struct MihomoTests {
         expect(empty.isEmpty, "An empty provider list is valid")
         let compatibleOnly = try MihomoAPI.decode(Data(#"{"providers":{"default":{"vehicleType":"Compatible","proxies":[]}}}"#.utf8))
         expect(compatibleOnly.isEmpty, "An API containing only internal collections has no configured providers")
-        expect(MihomoAPI.defaultInterval == 600, "Default polling is ten minutes")
+        expect(MihomoAPI.defaultInterval == 1800, "Default polling is thirty minutes")
 
         let request = try MihomoAPI.request(address: "http://localhost:9090/", secret: "test-secret")
         expect(request.url?.path == "/providers/proxies", "Trailing slash must not change the endpoint")

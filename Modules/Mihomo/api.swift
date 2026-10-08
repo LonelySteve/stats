@@ -32,7 +32,7 @@ public struct MihomoProvider: Codable {
 
 enum MihomoAPI {
     static let defaultAddress = "http://192.168.8.1:9090"
-    static let defaultInterval = 600
+    static let defaultInterval = 1800
 
     private struct Response: Decodable {
         let providers: [String: Provider]

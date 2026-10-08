@@ -282,6 +282,7 @@
 "1 minute" = "1 minute";
 "5 minutes" = "5 minutes";
 "15 minutes" = "15 minutes";
+"30 minutes" = "30 minutes";
 "CPU usage threshold" = "CPU usage threshold";
 "Efficiency cores" = "Efficiency cores";
 "Performance cores" = "Performance cores";

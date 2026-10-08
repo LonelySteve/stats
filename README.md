@@ -59,7 +59,9 @@ Stats is an application that allows you to monitor your macOS system.
 Enable the Mihomo module in Stats settings to read `GET /providers/proxies`.
 The default API address is `http://192.168.8.1:9090`; set the API secret in the
 module settings (stored in macOS Keychain). Providers are read on enable and
-every 10 minutes, with a manual Refresh button in the popup.
+every 30 minutes by default, with a manual Refresh button in the popup.
+The update interval can be changed to 1, 5, 10, 15 or 30 minutes, or one hour.
+Changes take effect immediately and are saved for the next launch.
 Automatic reads never display Keychain authorization dialogs. The credential
 or access error is cached for the current app session; polling reuses it.
 If access is required, click **Read secret** in Mihomo settings to authorize

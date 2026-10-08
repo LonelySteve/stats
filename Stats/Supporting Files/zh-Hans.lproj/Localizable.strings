@@ -282,6 +282,7 @@
 "1 minute" = "1 分钟";
 "5 minutes" = "5 分钟";
 "15 minutes" = "15 分钟";
+"30 minutes" = "30 分钟";
 "CPU usage threshold" = "CPU占用阈值";
 "Efficiency cores" = "能效核心";
 "Performance cores" = "性能核心";

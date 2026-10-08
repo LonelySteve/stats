@@ -2,6 +2,11 @@ import Cocoa
 import Kit
 
 enum MihomoPreferences {
+    static var updateInterval: Int {
+        get { Store.shared.int(key: "Mihomo_updateInterval", defaultValue: MihomoAPI.defaultInterval) }
+        set { Store.shared.set(key: "Mihomo_updateInterval", value: newValue) }
+    }
+
     static var showUsed: Bool {
         get { Store.shared.bool(key: "Mihomo_showUsed", defaultValue: false) }
         set { Store.shared.set(key: "Mihomo_showUsed", value: newValue) }
@@ -50,6 +55,9 @@ public class Mihomo: Module {
             guard let self else { return }
             self.updateWidgets()
             self.popupView.update(self.providers)
+        }
+        self.settingsView.intervalCallback = { [weak self] value in
+            self?.reader?.setInterval(value)
         }
         self.popupView.refreshCallback = { [weak self] in self?.reader?.refresh() }
         self.setReaders([self.reader])

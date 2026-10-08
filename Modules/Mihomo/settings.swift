@@ -5,6 +5,7 @@ import Kit
 final class Settings: NSStackView, Settings_v, NSTextFieldDelegate {
     var connectionCallback: (() -> Void)?
     var displayCallback: (() -> Void)?
+    var intervalCallback: ((Int) -> Void)?
     private let address = NSTextField()
     private let secret = NSSecureTextField()
     private let status = NSTextField(wrappingLabelWithString: "")
@@ -28,7 +29,18 @@ final class Settings: NSStackView, Settings_v, NSTextFieldDelegate {
         self.addArrangedSubview(PreferencesSection([
             PreferencesRow(localizedString("API address"), component: self.address),
             PreferencesRow("Secret", component: self.secret),
-            PreferencesRow(localizedString("Update interval"), component: NSTextField(labelWithString: localizedString("10 minutes"))),
+            PreferencesRow(localizedString("Update interval"), component: selectView(
+                action: #selector(self.changeUpdateInterval),
+                items: [
+                    KeyValue_t(key: "60", value: "1 minute"),
+                    KeyValue_t(key: "300", value: "5 minutes"),
+                    KeyValue_t(key: "600", value: "10 minutes"),
+                    KeyValue_t(key: "900", value: "15 minutes"),
+                    KeyValue_t(key: "1800", value: "30 minutes"),
+                    KeyValue_t(key: "3600", value: "Every hour")
+                ],
+                selected: "\(MihomoPreferences.updateInterval)"
+            )),
             PreferencesRow(localizedString("Invert display (show used quota)"), component: switchView(
                 action: #selector(self.toggleUsage), state: MihomoPreferences.showUsed
             )),
@@ -72,6 +84,12 @@ final class Settings: NSStackView, Settings_v, NSTextFieldDelegate {
             self.providerList.addArrangedSubview(row)
             row.widthAnchor.constraint(equalTo: self.providerList.widthAnchor).isActive = true
         }
+    }
+
+    @objc private func changeUpdateInterval(_ sender: NSPopUpButton) {
+        guard let key = sender.selectedItem?.representedObject as? String, let value = Int(key) else { return }
+        MihomoPreferences.updateInterval = value
+        self.intervalCallback?(value)
     }
 
     @objc private func toggleUsage(_ sender: NSControl) {
